@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE person [
+    <!ELEMENT person (name,(age|birthdate),gender)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT birthdate (#PCDATA)>
+    <!ELEMENT gender (#PCDATA)>
+]>
+
+<person>
+    <name>
+        Steven
+    </name>
+    <!-- <age>
+        27
+    </age> -->
+    <birthdate>
+        20/06/1990
+    </birthdate>
+    <gender>
+        Male
+    </gender>
+</person>

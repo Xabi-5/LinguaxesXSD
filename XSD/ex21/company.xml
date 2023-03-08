@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="company.xsd">
+    <general_information multinational = "false" currency = "euro">
+        <name> XML Technologies </name>
+        <numEmployees> 6 </numEmployees>
+        <sector>Technology</sector>
+    </general_information>
+
+    <staffInformation date="2023-03-02">
+        <department code ="ADMIN" name="Administracion">
+            <employee>
+                <name>Alicia Torres Pan</name>
+                <role>Head of Department</role>
+                <sickLeave has="NO"></sickLeave>
+                <salary>2250.00</salary>
+                <user name="atorres"></user>
+                <key>3%abYki6</key>
+            </employee>
+            <employee>
+                <name>Xoán Aldrei Soto</name>
+                <role>Employee</role>
+                <sickLeave has="YES"></sickLeave>
+                <salary>1200.00</salary>
+                <user name="xaldrei"></user>
+                <key>6@hjKm87</key>
+            </employee>
+            <employee>
+                <name>Ana Mota Rei</name>
+                <role>Employee</role>
+                <sickLeave has="NO"></sickLeave>
+                <salary>1250.50</salary>
+                <user name="amotar"></user>
+                <key>4%wtrtHQ</key>
+                </employee>
+        </department>
+       
+       <department code="COMPU" name="Administracion">
+            <employee>
+                <name>Óscar Baltar Dacosta</name>
+                <role>Head of Department</role>
+                <sickLeave has="YES"></sickLeave>
+                <salary>2300.75</salary>
+                <user name="obaltar"></user>
+                <key>8$abcdHj</key>
+            </employee>
+            <employee>
+                <name>Helena Vilar Moure</name>
+                <role>Employee</role>
+                <sickLeave has="NO"></sickLeave>
+                <salary>1500.35</salary>
+                <user name="hvilar"></user>
+                <key>9?sdKp:s</key>  
+            </employee>
+            <employee>
+                <name>Andrea Seroido Paz</name>
+                <role>Head of Department</role>
+                <sickLeave has="NO"></sickLeave>
+                <salary>2500.85</salary>
+                <user name="guest"></user>
+                <key>9?sdKp:s</key>  
+            </employee>
+            
+       </department>
+       
+    </staffInformation>
+</company>

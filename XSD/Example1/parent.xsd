@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="parent">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="son" type="xs:string" />
+                <xs:element name="daughter" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="dni" type="dniType"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="dniType">
+        <xs:restriction base = "xs:string">
+            <xs:pattern value="\d{8}[A-HJ-NP-TV-Z]{1}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+<!-- ABCDEFGH JKLMN PQRSTV XYZ IOU-->

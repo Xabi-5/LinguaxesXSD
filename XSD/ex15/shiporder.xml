@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="shiporder.xsd" orderid="23">
+    <orderperson></orderperson>
+    <shipto>
+        <name></name>
+        <address></address>
+        <city></city>
+        <country></country>
+    </shipto>
+    <item>
+        <title></title>
+        <note></note>
+        <quantity>45</quantity>
+        <price>59.99</price>
+    </item>
+</shiporder>

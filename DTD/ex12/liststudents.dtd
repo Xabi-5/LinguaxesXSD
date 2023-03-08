@@ -1,0 +1,19 @@
+<!ELEMENT StudentList (Student)>
+<!ELEMENT Student (name+,courses+,exams+)>
+<!ATTLIST Student id ID #REQUIRED
+            StudyProgram CDATA #REQUIRED>
+
+    <!ELEMENT name (FirstName+,MiddleName?,LastName+)>
+        <!ELEMENT FirstName (#PCDATA)>
+        <!ELEMENT MiddleName (#PCDATA)>
+        <!ELEMENT LastName (#PCDATA)>
+    <!ELEMENT courses (course*)>
+        <!ELEMENT course (#PCDATA)>
+        <!ATTLIST course courseID ID #REQUIRED
+                            type CDATA #REQUIRED
+                            graded CDATA #REQUIRED
+                            mark CDATA #IMPLIED>
+    <!ELEMENT exams (exam*)>
+        <!ELEMENT exam (#PCDATA)>
+        <!ATTLIST exam course IDREF #REQUIRED
+                        outcome CDATA #REQUIRED>

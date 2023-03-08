@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!DOCTYPE StudentList SYSTEM "liststudents.dtd"[
+<!ENTITY SP1 "BSc in CS and Engineering">
+<!ENTITY SP2 "Master in CS">
+<!ENTITY SP3 "PhD in Physics">
+]>
+<StudentList>
+    <Student id='A102' StudyProgram= '&SP1;'>
+        <name>
+            <FirstName>Barack</FirstName>
+            <MiddleName>Hussein</MiddleName>
+            <LastName>Obama II</LastName>
+        </name>
+        <courses>
+            <course courseID='B70' type='Bachelor' graded='no'>Physics II</course>
+            <course courseID='B112' type='Postgrade' graded='yes' mark='7.84'>Aerodynamic design</course>
+            <course courseID='B33' type='Both' graded='no'>Classic philosophy</course>
+        </courses>
+        <exams>
+            <exam course='B112' outcome='pass'></exam>
+            <exam course='B33' outcome='fail'></exam>
+        </exams>
+    </Student>
+</StudentList>

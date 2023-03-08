@@ -1,0 +1,13 @@
+<!ELEMENT address (name,company,phone,city*,(personal|work|vacation))>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name number CDATA #REQUIRED>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone prefix CDATA #REQUIRED>
+<!ELEMENT city ANY>
+<!ATTLIST city state CDATA #FIXED "España">
+<!ELEMENT cityName (#PCDATA)>
+<!ELEMENT zipCode (#PCDATA)>
+<!ELEMENT personal EMPTY>
+<!ELEMENT work EMPTY>
+<!ELEMENT vacation EMPTY>

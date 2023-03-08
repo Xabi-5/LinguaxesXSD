@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<suppliers>
+    <order>
+        <tractor>
+            <component manName='Magnetti Marelli' fragile='no' SN='A30' maximumKM='30000'>
+                <deliveryDate>
+                    <day>21</day>
+                    <month>2</month>
+                    <year>2024</year>
+                </deliveryDate>
+                <weight kilos='130' ></weight>
+            </component>
+        </tractor>
+    </order>
+</suppliers>

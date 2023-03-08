@@ -1,0 +1,13 @@
+<juicers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="juicers.xsd">
+    <juicer>
+        <name>Hamilton</name>
+        <image>wA13.jpg</image>
+        <description>Slow</description>
+        <warranty>3</warranty>
+        <weight></weight>
+        <cost></cost>
+        <cost></cost>
+        <retailer></retailer>
+    </juicer>
+</juicers>

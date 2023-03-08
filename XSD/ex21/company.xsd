@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="company">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="general_information" type="GeneralInfoType">
+                </xs:element>
+                <xs:element name="staffInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="department" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="employee" type="EmployeeType" minOccurs="0" maxOccurs="3"/>
+                                    </xs:sequence>
+                                    <xs:attributeGroup ref="departmentAG"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="date" type="xs:date" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="sector">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Technology"/>
+            <xs:enumeration value="Education"/>
+            <xs:enumeration value="Finances"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="GeneralInfoType">
+        <xs:sequence>
+            <xs:element name="name" type="textType" />
+            <xs:element name="numEmployees" type="xs:integer" />
+            <xs:element name="sector" type="sector" />
+        </xs:sequence>
+        <xs:attribute name="multinational" type="xs:boolean" use="required" />
+        <xs:attribute name="currency" type="xs:string" fixed="euro"/>
+    </xs:complexType>
+    <xs:simpleType name="salary">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="1000"/>
+            <xs:maxExclusive value="9999"/>
+            <xs:fractionDigits value="2"/>
+            <xs:totalDigits value="6"/> 
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:attributeGroup name="departmentAG">
+        <xs:attribute name="code" use="required"  />
+        <xs:attribute name="name" use="required" />
+    </xs:attributeGroup>
+
+    <xs:complexType name="EmployeeType">
+        <xs:sequence>
+            <xs:element name="name" type="textType" />
+            <xs:element name="role" type="xs:string" />
+            <xs:element name="sickLeave">
+                <xs:complexType>
+                    <xs:attribute name="has" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="salary" type="xs:float" />
+            <xs:element name="user">
+                <xs:complexType>
+                    <xs:attribute name="name" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="key" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="textType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

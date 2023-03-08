@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE address SYSTEM "address.dtd">
+<address>
+    <name number="12">Enrico Pane</name>
+    <company>Fenosa</company>
+    <phone prefix="(011)">634382828</phone>
+    <city>
+        <cityName>Boiro</cityName>
+        <zipCode>15930</zipCode>
+    </city>
+    <personal />
+    
+</address>

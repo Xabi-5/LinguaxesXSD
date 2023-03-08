@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="juicers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juicer" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type = "xs:string" />
+                            <xs:element name="image" type = "imageFile" />
+                            <xs:element name="description" type = "xs:string" />
+                            <xs:element name="warranty" type = "xs:nonNegativeInteger" minOccurs="0" maxOccurs="1" />
+                            <xs:element name="weight" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="cost" minOccurs="1" maxOccurs="unbounded" />
+                            <xs:element name="retailer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="money">
+        <xs:restriction base = "xs:decimal">
+            <xs:fractionDigits value="2"></xs:fractionDigits>
+            <xs:totalDigits value="7"></xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="imageFile">
+        <xs:restriction base = "xs:string">
+            <xs:pattern value="[A-z0-9_]+\.[a-z0-9]{3,4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

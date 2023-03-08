@@ -1,0 +1,21 @@
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ex14.xsd">
+    <item>
+        <name>Pizza buffala</name>
+        <photo>pbu.jpg</photo>
+        <tags>buffala</tags>
+        <diameter>12</diameter>
+        <weight>1200</weight>
+        <price>21.99</price>
+        <size>Big</size>
+    </item>
+    <item>
+        <name>ball</name>
+        <photo>ball.jpg</photo>
+        <tags>football</tags>
+        <diameter>46.9</diameter>
+        <weight>0.710</weight>
+        <price>150.99</price>
+        <size>Big</size>
+    </item>
+</items>

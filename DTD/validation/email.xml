@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE message [
+    <!ELEMENT message (from,to+,subject?,body,attachment*)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+    <!ELEMENT subject (#PCDATA)>
+    <!ELEMENT attachment (#PCDATA)>
+]>
+
+<message>
+    <from>
+        gianpiero@pizza.pizza
+    </from>
+    <to>
+        luigi@pizza.pizza
+    </to>
+    <to>
+        paolo@house.house
+    </to>
+    <subject>
+        Sending files    
+    </subject>
+    <body>
+        *insert GR63 here*
+    </body>
+    <attachment>
+        D:/photos/cat1.jpg
+    </attachment>
+    <attachment>
+        D:/photos/cat2.jpg
+    </attachment>
+    <attachment>
+        D:/photos/cat3.jpg
+    </attachment>
+</message>

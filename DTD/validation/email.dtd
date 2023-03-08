@@ -1,0 +1,5 @@
+<!ELEMENT message (from,to+,subject?,body,attachment*)>
+<!ELEMENT address (name,company,phone)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
