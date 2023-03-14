@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<university xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="university.xsd">
+    <school idSchool='I1S'>
+        <name>International School of Language</name>
+        <location>Rue de la Grenouille 17</location>
+        <schoolStaff>
+            <staff idStaff='S1' name='Pierre Leclerc' title='PhD in Italian literature' category='Languages'>
+                <category>academic</category>
+                <address>
+                    <street>Rue de Sbinnala</street>
+                    <suburb>Montecarlo</suburb>
+                    <postcode>20750</postcode>
+                </address>
+                <address>
+                    <street>Via Musso</street>
+                    <suburb>Maranello</suburb>
+                    <postcode>70708</postcode>
+                </address>
+            </staff>
+        </schoolStaff>
+        <subjects>
+            <subject code='C3'>
+                <name>French 1</name>
+                <description>First year of the french language</description>
+                <capacity>60</capacity>
+                <lecturers lecCode='S1'/>
+            </subject>
+        </subjects>
+    </school>
+</university>

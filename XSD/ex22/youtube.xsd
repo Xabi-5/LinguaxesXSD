@@ -125,8 +125,19 @@
     </xs:simpleType>
 
     <xs:simpleType name="langType">
-        <xs:list base="xs:string">
-           <xs:choice></xs:choice>
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="French"/>
+                    <xs:enumeration value="Italian"/>
+                    <xs:enumeration value="German"/>
+                    <xs:enumeration value="English"/>
+                    <xs:enumeration value="Korean"/>
+                    <xs:enumeration value="Chinese"/>
+                    <xs:enumeration value="Japanese"/>
+
+                </xs:restriction>
+            </xs:simpleType>
         </xs:list>
     </xs:simpleType>
 </xs:schema>
