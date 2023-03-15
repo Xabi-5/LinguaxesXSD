@@ -5,8 +5,7 @@
         <name>International School of Language</name>
         <location>Rue de la Grenouille 17</location>
         <schoolStaff>
-            <staff idStaff='S1' name='Pierre Leclerc' title='PhD in Italian literature' category='Languages'>
-                <category>academic</category>
+            <staff idStaff='S1' name='Pierre Leclerc' title='PhD in Italian literature' category='academic'>
                 <address>
                     <street>Rue de Sbinnala</street>
                     <suburb>Montecarlo</suburb>

@@ -3,41 +3,22 @@
     <xs:element name="university">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="school" type="StaffType">
+                <xs:element name="school">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="name" type="xs:string" />
-                            <xs:element name="location" type="xs:string" />
+                            <xs:element name="location" type="xs:string" maxOccurs="unbounded" />
                             <xs:element name="schoolStaff">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="staff" type="StaffType">
-                                            
-                                        </xs:element>
+                                        <xs:element name="staff" type="StaffType" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="subjects">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="subject">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="name" type="xs:string" />
-                                                    <xs:element name="description" type="xs:string" />
-                                                    <xs:element name="capacity" type="xs:string" />
-                                                    <xs:element name="lecturers">
-                                                        <xs:complexType>
-                                                            <xs:attribute name="lecCode"
-                                                                type="xs:IDREF" use="required" />
-                                                        </xs:complexType>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                                <xs:attribute name="code" type="xs:IDREF"
-                                                    use="required" >
-                                                    </xs:attribute>
-                                            </xs:complexType>
-                                        </xs:element>
+                                        <xs:element name="subject" type="subjectType" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -48,7 +29,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:simpleType name="categories">
+    <xs:simpleType name="categoryType">
         <xs:list>
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -60,32 +41,43 @@
         </xs:list>
     </xs:simpleType>
     <xs:complexType name="StaffType">
-            <xs:sequence>
-                <xs:element name="staff">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="category" type="categories" />
-                            <xs:element name="address" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="street"
-                                            type="xs:string" />
-                                        <xs:element name="suburb"
-                                            type="xs:string" />
-                                        <xs:element name="postcode"
-                                            type="xs:string" />
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-            <xs:attribute name="idStaff" type="xs:ID"
-                            use="required" />
-                        <xs:attribute name="name" use="required" />
-                        <xs:attribute name="title" use="required" />
-                        <xs:attribute name="category" use="required" />
+        <xs:sequence>
+            <xs:element name="address" maxOccurs="unbounded" type="addressType"/>
+        </xs:sequence>
+        <xs:attribute name="idStaff" type="xs:ID" use="required" />
+        <xs:attribute name="name" use="required" />
+        <xs:attribute name="title" />
+        <xs:attribute name="category" type="categoryType" use="required" />
+    </xs:complexType>
+    <xs:complexType name="addressType">
+        <xs:sequence>
+            <xs:element name="street"
+                type="xs:string" />
+            <xs:element name="suburb"
+                type="xs:string" />
+            <xs:element name="postcode"
+                type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="subjectType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="description" type="xs:string" />
+            <xs:element name="capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="6"/>
+                        <xs:maxInclusive value="400"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="lecturers">
+                <xs:complexType>
+                    <xs:attribute name="lecCode"
+                        type="xs:IDREFS" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:ID" use="required" />
     </xs:complexType>
 </xs:schema>
